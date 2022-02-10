@@ -144,8 +144,24 @@
 
 // console.log(isNumber);
 
-const isNumber = (num1) => {
-  return typeof num1 === "number" ? "数値です。" : "！文字列です！";
-};
+// const isNumber = (num1) => {
+//   return typeof num1 === "number" ? "数値です。" : "！文字列です！";
+// };
 
-console.log(isNumber("100"));
+// console.log(isNumber("100"));
+
+/*論理演算子の本当の意味を知ろう　　&& || */
+// const flg1 = false;
+// const flg2 = false;
+// // if (flg1 || flg2) {
+// //   console.log("1または２はtrueです");
+// // }
+// // ||　は左側がfalseなら右側を返す
+// const num = null;
+// const fee = num || "金額が未設定です";
+// console.log(fee);
+
+// && は左側がtrueなら右側を返す
+// const num = null;
+// const fee = num && "何か値が設定されています";
+// console.log(fee);
