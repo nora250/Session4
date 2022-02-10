@@ -122,12 +122,30 @@
 
 //配列のコピー、結合
 // =で配列を引き継いだ時、引き継ぎ先の値を変更すると引き継ぎ元の値も変更されてしまう
-const arry4 = [10, 20];
-const arry5 = [30, 40];
-const arry6 = [...arry4];
-const arry7 = [...arry4, ...arry5];
-const arry8 = [...arry5, ...arry4];
-console.log(arry4);
-console.log(arry6);
-console.log(arry7);
-console.log(arry8);
+// const arry4 = [10, 20];
+// const arry5 = [30, 40];
+// const arry6 = [...arry4];
+// const arry7 = [...arry4, ...arry5];
+// const arry8 = [...arry5, ...arry4];
+// console.log(arry4);
+// console.log(arry6);
+// console.log(arry7);
+// console.log(arry8);
+
+/*三項演算子*/
+//ある条件？　　条件がTureの時　：　条件がFalseの時
+// const val1 = 1 > 2 ? "Ture" : "False";
+// console.log(val1);
+
+// const num = 1300;
+// // console.log(num.toLocaleString());
+// const isNumber =
+//   typeof num === "number" ? num.toLocaleString() : "数値を入力して下さい。";
+
+// console.log(isNumber);
+
+const isNumber = (num1) => {
+  return typeof num1 === "number" ? "数値です。" : "！文字列です！";
+};
+
+console.log(isNumber("100"));
