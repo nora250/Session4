@@ -59,25 +59,75 @@
 // function func1(str) {
 //   return str;
 // };
-const func1 = function func1(str) {
-  return str;
-};
-console.log(func1("func1です"));
-
-//アロー関数
-// const func2 = (str) => {
+// const func1 = function func1(str) {
 //   return str;
 // };
-// ()を省略可能
-// const func2 = (str) => {
-//   return str;
+// console.log(func1("func1です"));
+
+// //アロー関数
+// // const func2 = (str) => {
+// //   return str;
+// // };
+// // ()を省略可能
+// // const func2 = (str) => {
+// //   return str;
+// // };
+// //関数が単一の時、returnを省略することが可能
+// const func2 = (str) => str;
+// console.log(func2("func2です"));
+
+// // const func99 = (int) => int * 2;
+// // console.log(func99(9));
+
+// const func3 = (num1, num2) => num1 + num2;
+// console.log(func3(10, 10));
+
+/*分割代入*/
+// const myProfile = {
+//   name: "test1",
+//   age: 20
 // };
-//関数が単一の時、returnを省略することが可能
-const func2 = (str) => str;
-console.log(func2("func2です"));
+// const massage1 = `私の名前は、${myProfile.name}です。年齢は${myProfile.age}です。`;
+// console.log(massage1);
 
-// const func99 = (int) => int * 2;
-// console.log(func99(9));
+// const { name, age } = myProfile;
+// const massage2 = `私の名前は、${name}です。年齢は${age}です。`;
+// console.log(massage2);
 
-const func3 = (num1, num2) => num1 + num2;
-console.log(func3(10, 10));
+// const myProfile = ["test1", 28];
+// console.log(`私の名前は、${myProfile[0]}です。年齢は${myProfile[1]}です。`);
+
+// const [name, age] = myProfile;
+// console.log(`私の名前は、${name}です。年齢は${age}です。`);
+
+/*デフォルト値、引数など*/
+// const sayHello = (str = "ゲスト") => console.log(`こんにちわ、${str}さん！`);
+// sayHello("test1");
+
+/*スプレッド構文 ...*/
+//配列の展開
+// const arry1 = [1, 2];
+// // console.log(arry1);
+// // console.log(...arry1);
+// const sumFunc = (num1, num2) => console.log(num1 + num2);
+// //sumFunc(arry1[0], arry1[1]);
+// sumFunc(...arry1);
+
+//配列をまとめる
+// const arry2 = [1, 2, 3, 4, 5];
+// const [num1, num2, ...arry3] = arry2;
+// console.log(num1);
+// console.log(num2);
+// console.log(arry3);
+
+//配列のコピー、結合
+// =で配列を引き継いだ時、引き継ぎ先の値を変更すると引き継ぎ元の値も変更されてしまう
+const arry4 = [10, 20];
+const arry5 = [30, 40];
+const arry6 = [...arry4];
+const arry7 = [...arry4, ...arry5];
+const arry8 = [...arry5, ...arry4];
+console.log(arry4);
+console.log(arry6);
+console.log(arry7);
+console.log(arry8);
